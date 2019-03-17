@@ -23,7 +23,8 @@ function work(bumpChannel) {
 		url: `https://discord-server.com/${process.env.GUILD_ID}/bump-form`,
 		responceType: 'json',
 		headers: {
-			cookie: process.env.COOKIE
+			cookie: process.env.COOKIE,
+			'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 YaBrowser/19.1.0.2644 Yowser/2.5 Safari/537.36'
 		}
 	}).then(res => {
 		if(!res.data.ok) {
